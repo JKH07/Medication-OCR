@@ -6,5 +6,3 @@ def main(data):
         print("Success! Saved.")
     except Exception as err:
         print(err)
-
-main('meds\panadol.jpg')
