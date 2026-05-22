@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 from datetime import date
 import re
-from validation import get_active_ingredients
+from src.validation import get_active_ingredients
 load_dotenv()
 
 def get_supabase_client() -> Client:
