@@ -40,7 +40,7 @@ def validate(medication_data):
             need.get('overdose', [None])[0] or  
             None
         )
-        print(f'here jana {medication_data}')
+
         print("valid med")
         return medication_data
     else:

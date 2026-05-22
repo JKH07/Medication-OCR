@@ -24,7 +24,6 @@ def ocr_exctraction(image_path):
 def validate_medication(drug_data):
     try:
         found=validate(drug_data)
-        print(f'here  {found} ')
         return found
     except Exception as err:
         print(err)
@@ -35,5 +34,5 @@ def save(data:dict):
     #try exc block inside
     insert_medication(data)
 
-pipeline('meds\med3.jpg')
+
 
