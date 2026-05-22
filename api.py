@@ -16,20 +16,20 @@ app = FastAPI()
 @app.post("/upload-image")
 async def receive_image(
     file: UploadFile = File(...), 
-    authorization: Optional[str] = Header(None) # capture JWT
+   # authorization: Optional[str] = Header(None) # capture JWT
 ):
     if not file.content_type.startswith("image/"):
         raise HTTPException(status_code=400, detail="File must be an image")
 
-    if not authorization or not authorization.startswith("Bearer "):
-        raise HTTPException(status_code=401, detail="Missing or invalid Authorization header")
+    # if not authorization or not authorization.startswith("Bearer "):
+    #     raise HTTPException(status_code=401, detail="Missing or invalid Authorization header")
 
-    token = authorization.split(" ")[1]
+    # token = authorization.split(" ")[1]
 
     image_data = await file.read()
 
     try:
-        result = processor(image_data, token)
+        result = processor(image_data)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
