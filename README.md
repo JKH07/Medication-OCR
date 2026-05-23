@@ -1,5 +1,5 @@
-Medication OCR 
-Allows users to add medications to their profile simply by taking a
+##Medication OCR 
+-Allows users to add medications to their profile simply by taking a
 photo of a medication box or prescription, automating the extraction, validation, and storage of medication data without manual input.
 Pipeline:
 1-Picture --> 2-Read Image Contents --> 3-Process Contents Context --> 4-Structure to database column form--> 5-validate medication is real --> 6-get active ingredients--> 7-send to database
