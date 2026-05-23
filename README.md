@@ -1,6 +1,6 @@
 # Medication OCR
 
-Allows users to add medications to their profile simply by taking a photo of a medication box or prescription — automating the extraction, validation, and storage of medication data without manual input.
+Allows users to add medications to their profile simply by taking a photo of a medication box or prescription automating the extraction, validation, and storage of medication data without manual input.
 
 ---
 
@@ -15,7 +15,7 @@ Allows users to add medications to their profile simply by taking a photo of a m
 | 6 | Retrieve active ingredients | RxNorm API |
 | 7 | Store in database | Supabase |
 
-> **Why active ingredients?** They are required to determine drug-drug interactions — two medications may share an ingredient even if their brand names differ.
+> **Why active ingredients?** They are required to determine drug-drug interactions two medications may share an ingredient even if their brand names differ.
 
 ---
 
@@ -30,6 +30,4 @@ Allows users to add medications to their profile simply by taking a photo of a m
 
 ---
 
-## Notes
 
-- Images are written to a temporary file and accessed via file path before being sent to the Gemini API.
