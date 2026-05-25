@@ -6,10 +6,10 @@ def pipeline(image):
     data=ocr_exctraction(image)
     if(data):
         
-        send=validate_medication(data)
-        save(send)
+        return validate_medication(data)
+        
     else:
-        print("didnt work")
+        return "didnt work"
 #extract using ocr
 def ocr_exctraction(image_path):
     try:
@@ -30,9 +30,9 @@ def validate_medication(drug_data):
 
 
 # save initial info to database
-def save(data:dict):
-    #try exc block inside
-    insert_medication(data)
+# def save(data:dict):
+#     #try exc block inside
+#     insert_medication(data)
 
 
 

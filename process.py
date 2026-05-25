@@ -2,7 +2,7 @@ from src.workflow import pipeline
 
 def processor(data):
     try:
-        pipeline(data)
-        return "Success! Saved."
+        return pipeline(data)
+        
     except Exception as err:
         return err

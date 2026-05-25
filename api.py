@@ -10,7 +10,7 @@ from typing import Optional
 import os
 import uvicorn
 from process import processor
-
+from save_to_data_base import insert_medication
 app = FastAPI()
 
 @app.post("/upload-image")
@@ -34,6 +34,8 @@ async def receive_image(
 
     try:
         result = processor(tmp_path)
+        data=insert_medication(result)
+        
     except Exception as e:
         raise HTTPException(500, str(e))
 
@@ -42,7 +44,7 @@ async def receive_image(
         "message": "Image processed",
         "filename": file.filename,
         "status": "success",
-        "extracted_data": result
+        "extracted_data": data
     }
 
 if __name__ == "__main__":
