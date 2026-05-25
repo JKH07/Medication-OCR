@@ -3,6 +3,6 @@ from src.workflow import pipeline
 def processor(data):
     try:
         pipeline(data)
-        print("Success! Saved.")
+        return "Success! Saved."
     except Exception as err:
-        print(err)
+        return err

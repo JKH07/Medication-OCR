@@ -41,7 +41,8 @@ async def receive_image(
     return {
         "message": "Image processed",
         "filename": file.filename,
-        "status": "success"
+        "status": "success",
+        "extracted_data": result
     }
 
 if __name__ == "__main__":
