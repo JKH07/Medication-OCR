@@ -4,7 +4,7 @@ import os
 import tempfile
 import uvicorn
 from process import processor
-from save_to_data_base import insert_medication
+from src.save_to_data_base import insert_medication
 
 app = FastAPI()
 
